@@ -26,14 +26,14 @@ services:
       - app_network
 
   database:
-      image: mariadb
-      container_name: app_database
-      environment:
-          MARIADB_ROOT_PASSWORD: root
-      ports:
-          -   "3306:3306"
-      networks:
-          - app_network
+    image: mariadb
+    container_name: app_database
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    networks:
+      - app_network
 
 networks:
   app_network:
